@@ -20,7 +20,7 @@ const ProductCard = () => {
           className="bg-green-500 hover:bg-white text-white hover:text-green-500 font-bold py-2 px-4 rounded-full cursor-pointer"
           onClick={handleButtonClick}
         >
-          Go To Instruction Page
+          Continue
         </button>
       </div>
     </div>
