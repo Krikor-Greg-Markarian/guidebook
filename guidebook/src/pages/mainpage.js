@@ -7,43 +7,49 @@ import Footer from '@/components/Footer';
 const products = [
   {
     title: 'Milk',
-    description: 'Fresh and nutritious',
+    // description: 'Fresh and nutritious',
     isSafe: false,
     image: '111.jpg',
   },
   {
     title: 'Cheese',
-    description: 'Delicious and savory',
+    // description: 'Delicious and savory',
     isSafe: true,
     image: '111.jpg',
   },
   {
     title: 'Chocolate',
-    description: 'Sweet and indulgent',
+    // description: 'Sweet and indulgent',
     isSafe: true,
     image: '111.jpg',
   },
   {
     title: 'Yogurt',
-    description: 'Creamy and rich',
+    // description: 'Creamy and rich',
     isSafe: true,
     image: '111.jpg',
   },
   {
     title: 'Chips',
-    description: 'Crunchy and flavorful',
+    // description: 'Crunchy and flavorful',
     isSafe: true,
     image: '111.jpg',
   },
   {
     title: 'Ice Cream',
-    description: 'Cold and delightful',
+    // description: 'Cold and delightful',
     isSafe: true,
     image: '111.jpg',
   },
 ];
 
-const unsortedCategories = ['Milk', 'Cheese', 'Chocolate', 'Yogurt', 'Chips'];
+const unsortedCategories = [
+  'Milk 🥛',
+  'Cheese 🧀',
+  'Chocolate 🍫',
+  'Yogurt 🍦',
+  'Chips 🍟',
+];
 
 // Sort categories in ascending order (A to Z)
 const categories = unsortedCategories
@@ -66,12 +72,17 @@ const IndexPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row">
+    <div
+      style={{
+        backgroundImage: "url('/backgrounds/Products1.jpeg')",
+      }}
+      className="flex flex-col md:flex-row"
+    >
       <div className="w-full p-4">
         {' '}
         {/* Update this line */}
         {/* Add search bar */}
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex mb-4 pt-4">
           <input
             type="text"
@@ -104,7 +115,7 @@ const IndexPage = () => {
             </div>
           ))}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

@@ -3,7 +3,12 @@ import React from 'react';
 
 const Card = ({ title, description, isSafe, image }) => {
   return (
-    <div className="bg-white p-4 m-2 border rounded-md">
+    <div
+      style={{
+        backgroundImage: "url('/backgrounds/Products2.jpeg')",
+      }}
+      className="p-4 m-2 border rounded-xl"
+    >
       {/* Display the image */}
       {image && (
         <img
@@ -13,15 +18,17 @@ const Card = ({ title, description, isSafe, image }) => {
         />
       )}
 
-      <h2 className="text-xl font-bold">{title}</h2>
-      <p>{description}</p>
+      <div className="">
+        <h2 className="text-xl font-bold text-center">{title}</h2>
+        {/* <p className="text-center">{description}</p> */}
 
-      {/* Display safety status */}
-      {isSafe ? (
-        <span className="text-green-500 text-2xl">😊</span>
-      ) : (
-        <span className="text-red-500 text-2xl">😡</span>
-      )}
+        {/* Display safety status */}
+        {isSafe ? (
+          <span className="text-2xl flex justify-center">😊</span>
+        ) : (
+          <span className="text-2xl flex justify-center">😡</span>
+        )}
+      </div>
     </div>
   );
 };
